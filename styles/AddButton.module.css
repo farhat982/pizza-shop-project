@@ -1,0 +1,19 @@
+.cotainter {
+}
+.mainAddButton {
+  padding: 10px;
+  margin: 20px;
+  width: 150px;
+  color: white;
+  background-color: #d1411e;
+  border: 1px solid white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mainAddButton:hover {
+  background-color: white;
+  border: 1px solid #d1411e;
+  color: #d1411e;
+  border-radius: 5px;
+}
