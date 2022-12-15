@@ -1,7 +1,7 @@
 import styles from '../styles/CashOrder.module.css'
 import { useState } from 'react'
 
-const cashOrder = ({ total, createOrder }) => {
+const CashOrder = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState('')
   const [address, setAddress] = useState('')
 
@@ -50,4 +50,4 @@ const cashOrder = ({ total, createOrder }) => {
   )
 }
 
-export default cashOrder
+export default CashOrder
