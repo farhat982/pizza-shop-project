@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import styles from '../styles/PizzaCard.module.css'
 import Link from 'next/link'
-import axios from 'axios'
 
 const PizzaCard = ({ pizza }) => {
   return (

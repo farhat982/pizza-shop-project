@@ -1,5 +1,4 @@
 import styles from '../styles/PizzaList.module.css'
-import Image from 'next/image'
 import PizzaCard from './PizzaCard'
 
 const PizzaList = ({ pizzaList }) => {
