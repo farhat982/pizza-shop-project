@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   }
 
   if (method === 'PUT') {
-    if (!token || token !== process.env.TOKEN) {
+    if (!token || token !== 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
       return res.status(401).json('Not authenticated')
     }
     try {
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     }
   }
   if (method === 'DELETE') {
-    if (!token || token !== process.env.TOKEN) {
+    if (!token || token !== 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
       return res.status(401).json('Not authenticated')
     }
     try {
