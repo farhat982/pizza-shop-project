@@ -4,8 +4,8 @@ const handler = (req, res) => {
   if (req.method === 'POST') {
     const { username, password } = req.body
     if (
-      username === process.env.ADMIN_USERNAME &&
-      password === process.env.ADMIN_PASSWORD
+      username === 'admin' &&
+      password === '123456'
     ) {
       res.setHeader(
         'Set-Cookie',
