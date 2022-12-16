@@ -155,7 +155,7 @@ const Order = ({ order }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    `http://localhost:3000/api/orders/${params.id}`
+    `https://gleaming-cajeta-f087b9.netlify.app/api/orders/${params.id}`
   )
   return {
     props: {
