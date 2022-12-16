@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = 'mongodb+srv://pizza:vahryg-nafky8-Vihqyc@cluster0.1fekigg.mongodb.net/?retryWrites=true&w=majority'
+const MONGODB_URI = 'mongodb+srv://pizza:vahryg-nafky8-Vihqyc@cluster0.1fekigg.mongodb.net/pizza?retryWrites=true&w=majority'
 
 if (!MONGODB_URI) {
   throw new Error(
