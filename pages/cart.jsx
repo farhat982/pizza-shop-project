@@ -25,7 +25,7 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/orders',
+        'https://gleaming-cajeta-f087b9.netlify.app/api/orders',
         data
       )
       if (response.status === 201) {
