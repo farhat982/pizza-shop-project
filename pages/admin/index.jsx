@@ -12,7 +12,7 @@ const Index = ({ orders, products }) => {
     console.log(id)
     try {
       const response = await axios.delete(
-        'https://gleaming-cajeta-f087b9.netlify.app/api/products/' + id
+        'https://pizza-shop-project.vercel.app/api/products/' + id
       )
       setPizzaList(
         response.data,
@@ -27,7 +27,7 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status
     try {
       const response = await axios.put(
-        'https://gleaming-cajeta-f087b9.netlify.app/api/orders/' + id,
+        'https://pizza-shop-project.vercel.app/api/orders/' + id,
         {
           status: currentStatus + 1,
         }
@@ -132,8 +132,8 @@ export const  getServerSideProps = async (ctx) => {
       },
     }
   }
-  const productRes = await axios.get('https://gleaming-cajeta-f087b9.netlify.app/api/products')
-  const orderRes = await axios.get('https://gleaming-cajeta-f087b9.netlify.app/api/orders')
+  const productRes = await axios.get('https://pizza-shop-project.vercel.app/api/products')
+  const orderRes = await axios.get('https://pizza-shop-project.vercel.app/api/orders')
 
   return {
     props: {
