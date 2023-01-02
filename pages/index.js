@@ -37,7 +37,7 @@ export const  getServerSideProps = async (ctx) => {
   if (myCookie.token === 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
     admin = true
   }
-  const response = await axios.get('https://gleaming-cajeta-f087b9.netlify.app/api/products')
+  const response = await axios.get('https://pizza-shop-project.vercel.app/api/products')
   return {
     props: {
       pizzaList: response.data,
