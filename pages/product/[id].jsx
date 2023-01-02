@@ -144,7 +144,7 @@ const Product = ({ pizza }) => {
 }
 export const getServerSideProps = async ({ params }) => {
   const response = await axios.get(
-    `https://pizza-shop-project.vercel.app/api/products/${params.id}`
+    `https://gleaming-cajeta-f087b9.netlify.app/api/products/${params.id}`
   )
   return {
     props: {
