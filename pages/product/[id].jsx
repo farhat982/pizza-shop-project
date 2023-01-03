@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from '../../styles/Product.module.css'
-import axios from 'axios'
+//import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 
@@ -143,7 +143,7 @@ const Product = ({ pizza }) => {
   )
 }
 export const getServerSideProps = async ({ params }) => {
-  const response = await axios.get(
+  const response = await fetch(
     `https://gleaming-cajeta-f087b9.netlify.app/api/products/${params.id}`
   )
   return {
