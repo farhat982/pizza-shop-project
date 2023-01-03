@@ -10,6 +10,10 @@ import Add from '../components/Add'
 export const  getServerSideProps = async (ctx) => {
   const myCookie = ctx?.req.cookies || ''
   let admin = false
+    res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
 
   if (myCookie.token === 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
     admin = true
