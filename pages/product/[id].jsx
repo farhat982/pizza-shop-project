@@ -5,6 +5,17 @@ import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
 
+export const getServerSideProps = async ({ params }) => {
+  const response = await axios.get(
+    `https://gleaming-cajeta-f087b9.netlify.app/api/products/${params.id}`
+  )
+  return {
+    props: {
+      pizza: response.data,
+    },
+  }
+}
+
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0])
   const [size, setSize] = useState(0)
@@ -142,15 +153,6 @@ const Product = ({ pizza }) => {
     </div>
   )
 }
-export const getServerSideProps = async ({ params }) => {
-  const response = await axios.get(
-    `https://gleaming-cajeta-f087b9.netlify.app/api/products/${params.id}`
-  )
-  return {
-    props: {
-      pizza: response.data,
-    },
-  }
-}
+
 
 export default Product
