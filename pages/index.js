@@ -7,6 +7,22 @@ import { useState } from 'react'
 import AddButton from '../components/AddButton'
 import Add from '../components/Add'
 
+export const  getServerSideProps = async (ctx) => {
+  const myCookie = ctx?.req.cookies || ''
+  let admin = false
+
+  if (myCookie.token === 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
+    admin = true
+  }
+  const response = await axios.get('https://gleaming-cajeta-f087b9.netlify.app/api/products')
+  return {
+    props: {
+      pizzaList: response.data,
+      admin,
+    },
+  }
+}
+
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true)
   return (
@@ -30,18 +46,4 @@ export default function Home({ pizzaList, admin }) {
   )
 }
 
-export const  getServerSideProps = async (ctx) => {
-  const myCookie = ctx?.req.cookies || ''
-  let admin = false
 
-  if (myCookie.token === 'SWDw4Cv||663Zp3|zxtp%ok6Ejj') {
-    admin = true
-  }
-  const response = await axios.get('https://gleaming-cajeta-f087b9.netlify.app/api/products')
-  return {
-    props: {
-      pizzaList: response.data,
-      admin,
-    },
-  }
-}
